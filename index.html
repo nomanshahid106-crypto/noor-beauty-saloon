@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noor Beauty Saloon — Soft Beauty in Sadiq Bazar | Rahim Yar Khan</title>
+<meta name="description" content="Noor Beauty Saloon, a beauty salon in Sadiq Bazar, Rahim Yar Khan. Rated 4.8 stars on Google. Call +92 303 6453070.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fff9f4; --blush:#fbe9e7; --petal:#f6cfd2; --rose:#c96f7d; --rosedeep:#a34a5c;
+  --sage:#aebfa5; --sagedeep:#6f8663; --ink:#4a3238; --soft:#8a6a70; --card:#fffdfb;
+  --line:#f0d9d5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Quicksand',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;line-height:1.65}
+a{text-decoration:none;color:inherit}
+.serif{font-family:'Fraunces',serif}
+
+/* floating petals */
+.petal{position:fixed;top:-40px;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 30% 30%,#f9dfe0,#f2bfc6);border-radius:80% 4px 80% 4px;opacity:.55;animation:fall linear infinite}
+.petal.p1{width:22px;height:22px;left:8%;animation-duration:17s}
+.petal.p2{width:14px;height:14px;left:26%;animation-duration:23s;animation-delay:-6s;background:radial-gradient(ellipse at 30% 30%,#eef3e6,#cfdec4)}
+.petal.p3{width:18px;height:18px;left:57%;animation-duration:19s;animation-delay:-11s}
+.petal.p4{width:12px;height:12px;left:76%;animation-duration:26s;animation-delay:-3s;background:radial-gradient(ellipse at 30% 30%,#fdeeda,#f6d9ae)}
+.petal.p5{width:20px;height:20px;left:90%;animation-duration:21s;animation-delay:-15s}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(55vh) translateX(26px) rotate(180deg)}100%{transform:translateY(108vh) translateX(-14px) rotate(340deg)}}
+
+/* header */
+header{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(18px,5vw,60px)}
+.logo{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--rosedeep)}
+.logo span{color:var(--sagedeep);font-style:italic}
+.head-cta{display:flex;gap:10px;align-items:center}
+.chip{font-size:.78rem;font-weight:700;letter-spacing:.06em;background:#fff;border:1px solid var(--line);color:var(--rosedeep);padding:8px 15px;border-radius:999px;box-shadow:0 4px 14px rgba(201,111,125,.12)}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;font-size:.92rem;transition:.3s;border:2px solid transparent}
+.btn-rose{background:var(--rose);color:#fff;box-shadow:0 10px 24px rgba(201,111,125,.35)}
+.btn-rose:hover{background:var(--rosedeep);transform:translateY(-2px)}
+.btn-line{border-color:var(--sage);color:var(--sagedeep);background:#fff}
+.btn-line:hover{background:var(--sage);color:#fff}
+.btn-wa{background:#3dbb6b;color:#fff;box-shadow:0 10px 24px rgba(61,187,107,.3)}
+.btn-wa:hover{background:#2fa355;transform:translateY(-2px)}
+@media(max-width:640px){.chip{display:none}}
+
+/* hero with arches */
+.hero{position:relative;z-index:2;padding:26px clamp(18px,5vw,60px) 84px;text-align:center}
+.hero .kicker{display:inline-flex;gap:10px;align-items:center;font-size:.8rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--sagedeep)}
+.hero .kicker::before,.hero .kicker::after{content:"";width:34px;height:2px;background:var(--petal);border-radius:2px}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.6rem,7vw,4.9rem);line-height:1.08;margin:20px auto 8px;max-width:820px}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p{max-width:600px;margin:14px auto 0;color:var(--soft);font-size:1.06rem;font-weight:500}
+.arches{display:flex;justify-content:center;gap:clamp(12px,3vw,28px);margin:46px auto 0;max-width:880px;padding:0 6px}
+.arch{flex:1;max-width:250px;aspect-ratio:3/4.1;border-radius:999px 999px 22px 22px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;color:#fff;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;box-shadow:0 22px 44px rgba(163,74,92,.18);animation:bob 7s ease-in-out infinite}
+.arch.a1{background:linear-gradient(170deg,#eec3c9,#c96f7d)}
+.arch.a2{background:linear-gradient(170deg,#dbe6d2,#7d9a6e);animation-delay:-2.4s;margin-top:34px}
+.arch.a3{background:linear-gradient(170deg,#f6ddba,#d99a5b);animation-delay:-4.6s}
+.arch::before{content:"";position:absolute;inset:12px;border:1.5px dashed rgba(255,255,255,.55);border-radius:999px 999px 16px 16px}
+.arch b{position:absolute;top:16%;left:0;right:0;text-align:center;font-size:2.6rem;font-style:normal;opacity:.9}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.rating-pill{display:inline-flex;gap:9px;align-items:center;margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-weight:700;color:var(--rosedeep);box-shadow:0 8px 20px rgba(74,50,56,.07)}
+.rating-pill .st{color:#e5a83d;letter-spacing:2px}
+
+/* ribbon */
+.ribbon{background:var(--sagedeep);color:#fdf6ec;overflow:hidden;padding:11px 0;transform:rotate(-.6deg) scale(1.02)}
+.ribbon div{display:flex;width:max-content;animation:slide 30s linear infinite;font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;white-space:nowrap}
+.ribbon span{padding:0 22px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative;z-index:2;padding:84px clamp(18px,5vw,60px);max-width:1120px;margin:auto}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.sec-head .tag{font-size:.76rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--rose)}
+.sec-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,4.6vw,3rem);margin-top:12px;line-height:1.15}
+.sec-head h2 em{color:var(--sagedeep);font-style:italic}
+.sec-head p{color:var(--soft);margin-top:12px;font-weight:500}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* services — arch cards */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.svc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc{grid-template-columns:1fr}}
+.svc a{background:var(--card);border:1px solid var(--line);border-radius:130px 130px 20px 20px;padding:40px 24px 26px;text-align:center;transition:.35s;display:block}
+.svc a:hover{transform:translateY(-7px);box-shadow:0 24px 44px rgba(201,111,125,.16);border-color:var(--petal)}
+.svc .ic{font-size:2rem;display:block;margin-bottom:12px}
+.svc h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;color:var(--rosedeep)}
+.svc p{color:var(--soft);font-size:.93rem;margin-top:8px;font-weight:500}
+.svc .ask{margin-top:14px;display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sagedeep)}
+
+/* about split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,5vw,64px);align-items:center}
+@media(max-width:840px){.split{grid-template-columns:1fr}}
+.blobart{position:relative;aspect-ratio:1/1;max-width:440px;margin:auto;width:100%}
+.blob{position:absolute;inset:0;background:linear-gradient(150deg,#f7d4d8,#eec3c9 45%,#dbe6d2);border-radius:58% 42% 55% 45%/52% 56% 44% 48%;animation:morph 12s ease-in-out infinite}
+@keyframes morph{0%,100%{border-radius:58% 42% 55% 45%/52% 56% 44% 48%}50%{border-radius:44% 56% 42% 58%/58% 42% 60% 40%}}
+.blobart .mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:6.4rem;color:rgba(163,74,92,.55)}
+.split h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,4.4vw,2.9rem);line-height:1.15}
+.split h2 em{color:var(--rose);font-style:italic}
+.split p{color:var(--soft);margin-top:16px;font-weight:500}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.fact b{font-family:'Fraunces',serif;font-size:1.45rem;color:var(--rosedeep);display:block}
+.fact span{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sagedeep)}
+
+/* visit */
+.visit{background:linear-gradient(160deg,#fdf0ee,#f3f0e2);border:1px solid var(--line);border-radius:200px 200px 26px 26px;padding:56px clamp(20px,5vw,54px);text-align:center}
+.visit h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.9rem,4.4vw,2.8rem)}
+.visit h2 em{color:var(--rose);font-style:italic}
+.visit address{font-style:normal;margin:18px auto 6px;max-width:520px;color:var(--ink);font-weight:600}
+.visit .ph{font-size:1.15rem;font-weight:700;color:var(--rosedeep)}
+
+footer{position:relative;z-index:2;text-align:center;padding:36px 20px 110px;color:var(--soft);font-size:.88rem;font-weight:500}
+footer .fname{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--rosedeep)}
+footer .fname span{color:var(--sagedeep);font-style:italic}
+.disc{max-width:640px;margin:12px auto 0;font-size:.78rem;opacity:.85}
+
+/* mobile bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none;gap:10px}
+.mbar a{flex:1;text-align:center;padding:14px;border-radius:999px;font-weight:700;font-size:.9rem}
+.mbar .c{background:var(--rose);color:#fff}
+.mbar .w{background:#3dbb6b;color:#fff}
+@media(max-width:760px){.mbar{display:flex}}
+</style>
+</head>
+<body>
+<div class="petal p1"></div><div class="petal p2"></div><div class="petal p3"></div><div class="petal p4"></div><div class="petal p5"></div>
+
+<header>
+  <a class="logo" href="#top">Noor <span>Beauty Saloon</span></a>
+  <div class="head-cta">
+    <span class="chip">Beauty Salon · Sadiq Bazar</span>
+    <a class="btn btn-rose" href="tel:+923036453070" style="padding:10px 22px">Call Now</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <span class="kicker">Noor · نور · Light</span>
+    <h1>Beauty that feels like <em>morning light</em></h1>
+    <p>A soft, welcoming ladies' beauty salon in Sadiq Bazar, Rahim Yar Khan — for everyday glow, special occasions and your biggest days.</p>
+    <div class="arches" aria-hidden="true">
+      <div class="arch a1"><b>❀</b>Bridal</div>
+      <div class="arch a2"><b>✿</b>Hair &amp; Skin</div>
+      <div class="arch a3"><b>❁</b>Makeup</div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/923036453070" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-line" href="#services">See Services</a>
+    </div>
+    <div class="rating-pill"><span class="st">★★★★★</span> 4.8 on Google · 20 reviews</div>
+  </div>
+
+  <div class="ribbon" aria-hidden="true"><div>
+    <span>Bridal Makeup ✿</span><span>Facials ✿</span><span>Hair Styling ✿</span><span>Mehndi ✿</span><span>Manicure &amp; Pedicure ✿</span><span>Party Makeup ✿</span>
+    <span>Bridal Makeup ✿</span><span>Facials ✿</span><span>Hair Styling ✿</span><span>Mehndi ✿</span><span>Manicure &amp; Pedicure ✿</span><span>Party Makeup ✿</span>
+  </div></div>
+
+  <section id="services">
+    <div class="sec-head reveal">
+      <span class="tag">Services</span>
+      <h2>Gentle care, <em>lovely</em> results</h2>
+      <p>Tap any service to ask about it on WhatsApp — availability and prices are confirmed by the salon.</p>
+    </div>
+    <div class="svc reveal">
+      <a href="https://wa.me/923036453070?text=I%20want%20to%20ask%20about%20Bridal%20Makeup" target="_blank" rel="noopener"><span class="ic">👰</span><h3>Bridal Makeup</h3><p>Complete bridal looks planned around your outfit and your day.</p><span class="ask">Ask on WhatsApp →</span></a>
+      <a href="https://wa.me/923036453070?text=I%20want%20to%20ask%20about%20Party%20Makeup" target="_blank" rel="noopener"><span class="ic">🎉</span><h3>Party Makeup</h3><p>Soft or glamorous makeup for dinners, functions and celebrations.</p><span class="ask">Ask on WhatsApp →</span></a>
+      <a href="https://wa.me/923036453070?text=I%20want%20to%20ask%20about%20Facials" target="_blank" rel="noopener"><span class="ic">🌸</span><h3>Facials &amp; Skin Care</h3><p>Cleansing and glow facials to refresh tired, dull-looking skin.</p><span class="ask">Ask on WhatsApp →</span></a>
+      <a href="https://wa.me/923036453070?text=I%20want%20to%20ask%20about%20Hair%20services" target="_blank" rel="noopener"><span class="ic">💇‍♀️</span><h3>Hair Care &amp; Styling</h3><p>Cuts, blow-outs and occasion styling for healthy-looking hair.</p><span class="ask">Ask on WhatsApp →</span></a>
+      <a href="https://wa.me/923036453070?text=I%20want%20to%20ask%20about%20Mehndi" target="_blank" rel="noopener"><span class="ic">🌿</span><h3>Mehndi</h3><p>Delicate and traditional henna designs for brides and festivals.</p><span class="ask">Ask on WhatsApp →</span></a>
+      <a href="https://wa.me/923036453070?text=I%20want%20to%20ask%20about%20Manicure%20and%20Pedicure" target="_blank" rel="noopener"><span class="ic">💅</span><h3>Mani-Pedi &amp; Grooming</h3><p>Manicure, pedicure, waxing and threading for a polished finish.</p><span class="ask">Ask on WhatsApp →</span></a>
+    </div>
+  </section>
+
+  <section id="about" style="padding-top:10px">
+    <div class="split">
+      <div class="blobart reveal" aria-hidden="true"><div class="blob"></div><div class="mono">N</div></div>
+      <div class="reveal">
+        <h2>A little pocket of <em>calm</em> in Sadiq Bazar</h2>
+        <p>Noor Beauty Saloon sits on Street Sadiq Bazar, near Jamia Qadri Masjid and Crown General Store — easy to reach from across Rahim Yar Khan. Clients rate the saloon 4.8 stars on Google, making it one of the area's best-loved beauty stops.</p>
+        <p>Message ahead on WhatsApp for bridal and party bookings, or call to plan your visit.</p>
+        <div class="facts">
+          <div class="fact"><b>4.8 ★</b><span>Google rating</span></div>
+          <div class="fact"><b>20</b><span>Google reviews</span></div>
+          <div class="fact"><b>Sadiq Bazar</b><span>Neighbourhood</span></div>
+          <div class="fact"><b>Ladies</b><span>Beauty salon</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:10px">
+    <div class="visit reveal">
+      <h2>Visit <em>Noor</em> Beauty Saloon</h2>
+      <address>Street Sadiq Bazar, near Jamia Qadri Masjid, Crown General Store, Rahim Yar Khan, 64200, Pakistan</address>
+      <p class="ph"><a href="tel:+923036453070">+92 303 6453070</a></p>
+      <div class="hero-cta" style="margin-top:28px">
+        <a class="btn btn-rose" href="tel:+923036453070">Call the Saloon</a>
+        <a class="btn btn-wa" href="https://wa.me/923036453070" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Noor+Beauty+Saloon+Rahim+Yar+Khan" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fname">Noor <span>Beauty Saloon</span></div>
+  <p>Beauty salon · Street Sadiq Bazar · Rahim Yar Khan</p>
+  <p class="disc">Sample website concept created for Noor Beauty Saloon. Details shown are from the business's public Google listing; please confirm services, prices and timings with the business.</p>
+</footer>
+
+<div class="mbar">
+  <a class="c" href="tel:+923036453070">Call Now</a>
+  <a class="w" href="https://wa.me/923036453070" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
